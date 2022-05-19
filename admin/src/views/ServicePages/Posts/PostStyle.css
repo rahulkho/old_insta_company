@@ -1,0 +1,39 @@
+.postUserName{
+  line-height: 36px;
+  font-weight: bold;
+}
+.postAvtar{
+  float: left;
+}
+.postImage{
+  max-width: 100%;
+}
+.postViewDiv{
+  font-weight: bold;
+}
+.video-thumbnail {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+}
+.video-thumbnail:before {
+   position:absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   -webkit-transform: translate(-50%, -50%);
+   content: "\f01d";
+   font-family: FontAwesome;
+   font-size: 100px;
+   color: #fff;
+   opacity: .8;
+   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+ }
+
+.video-thumbnail:hover:before {
+   color: #eee;
+ }
+

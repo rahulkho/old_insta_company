@@ -1,0 +1,15 @@
+span.innerBadgeSpan {
+  display: inline-block;
+  max-width: 150px;
+  overflow-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cardKeyword{
+  padding-top: 5px;
+}
+.keyWordList{
+  max-height: 250px;
+  overflow-y: auto;
+}

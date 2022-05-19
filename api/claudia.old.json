@@ -1,0 +1,10 @@
+{
+  "lambda": {
+    "role": "insta-api-executor",
+    "name": "insta-api",
+    "region": "ap-south-1"
+  },
+  "api": {
+    "id": "b3vsrrwrcj"
+  }
+}

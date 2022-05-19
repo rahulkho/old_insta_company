@@ -1,0 +1,44 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "private": true,
+  "files": [
+    "dist"
+  ],
+  "main": "lambda.js",
+  "scripts": {
+    "version": "babel -V",
+    "build": "babel src --out-dir dist",
+    "start": "nodemon --exec babel-node src/server.js"
+  },
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.0.17",
+    "@ffprobe-installer/ffprobe": "^1.0.10",
+    "aws-sdk": "^2.395.0",
+    "babel-watch": "^7.0.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "~1.4.3",
+    "dotenv": "^6.2.0",
+    "express": "~4.16.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "formidable": "^1.2.1",
+    "http-errors": "~1.6.2",
+    "jsonwebtoken": "^8.4.0",
+    "knex": "^0.16.3",
+    "lodash": "^4.17.11",
+    "pg": "^7.8.0",
+    "regenerator-runtime": "^0.13.1",
+    "request": "^2.88.0",
+    "sharp": "^0.22.1",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "@babel/runtime": "^7.3.1",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1"
+  }
+}

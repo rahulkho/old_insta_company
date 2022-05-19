@@ -1,0 +1,11 @@
+span.innerBadgeSpan {
+  display: inline-block;
+  max-width: 150px;
+  overflow-wrap: break-word;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.largeBadge{
+  font-size: 13px;
+}

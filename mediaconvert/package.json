@@ -1,0 +1,44 @@
+{
+  "name": "insta-mediaconvert",
+  "version": "0.0.1",
+  "private": true,
+  "main": "lambda.js",
+  "scripts": {
+    "start": "npm run prod",
+    "build": "babel src --out-dir dist && cp package.json dist/",
+    "watch": "nodemon --config ./nodemon.json --",
+    "dev": "NODE_ENV=development npm run watch src/server",
+    "test": "NODE_ENV=dev jest --coverage --runInBand --detectOpenHandles --setupFiles dotenv/config --forceExit --verbose",
+    "prod": "npm run build && NODE_ENV=production node dist/server",
+    "generate": "npm run build && cd dist && claudia generate-serverless-express-proxy --express-module app --profile insta",
+    "deploy": "cd dist && claudia create --handler lambda.handler --deploy-proxy-api --name insta-mediaconvert --region us-west-1 --no-optional-dependencies --profile insta",
+    "update": "npm run build && cd dist && claudia update --set-env-from-json config.json --profile insta"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.3",
+    "aws-sdk": "^2.437.0",
+    "aws-serverless-express": "^3.3.6",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "http-errors": "^1.7.2",
+    "knex": "^0.16.3",
+    "morgan": "~1.9.0",
+    "pg": "^7.9.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.3.1",
+    "babel-jest": "^24.7.1",
+    "eslint": "^5.13.0",
+    "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.7.1",
+    "supertest": "^4.0.2"
+  }
+}
